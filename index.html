@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passport Data Extraction Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Passport Data Extraction</h1>
+    
+    <!-- File Upload for Passport Image -->
+    <div class="input-group">
+      <label for="passportImage">Upload Passport Image:</label>
+      <input type="file" id="passportImage" accept="image/*" onchange="extractData()">
+    </div>
+    
+    <!-- Extracted Information Fields -->
+    <form id="passportForm">
+      <div class="input-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="passportNumber">Passport Number:</label>
+        <input type="text" id="passportNumber" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="text" id="dateOfBirth" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="issueDate">Issue Date:</label>
+        <input type="text" id="issueDate" readonly>
+      </div>
+      
+      <div class="input-group">
+        <label for="expirationDate">Expiration Date:</label>
+        <input type="text" id="expirationDate" readonly>
+      </div>
+      
+      <!-- Validation Button -->
+      <button type="button" onclick="validateData()">Validate Data</button>
+    </form>
+    
+    <!-- Validation Message -->
+    <div id="validationMessage"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
